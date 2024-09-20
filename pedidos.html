@@ -1,0 +1,22 @@
+{% extends 'layaout.html' %}
+
+{%  block content  %}
+{% load static %}
+
+<di class="p-3 text-center">
+    <div class="card card-body bg-white">
+             <h3> Realizar Pedido </h3>
+                {% block cuerpo %} 
+
+                <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+        </di>
+    
+    {% endblock cuerpo %}
+
+</div>
+
+{% endblock %}

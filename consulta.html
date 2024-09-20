@@ -1,0 +1,28 @@
+{% extends 'layaout.html' %}
+
+{%  block content  %}
+{% load static %}
+
+<di class="p-3 text-center">
+    <div class="card card-body bg-white">
+
+
+    <form method="post">
+        {%  csrf_token %}
+        <center>
+        <h1> Consulta Pedido</h1>
+        <br><input text="text" name="name">
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+
+    </form>
+      
+    <h3>Datos</h3>
+    <h3>{{data}}</h3>
+    </center>
+</di>
+    
+</div>
+
+{% endblock %}
